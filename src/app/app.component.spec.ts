@@ -1,31 +1,35 @@
 import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BodyComponent } from './components/body/body.component';
+
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.route';
+import { PasswordComponent } from './components/password/password.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+
+describe('Pruebas de AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        BodyComponent,
+        PasswordComponent,
+        FooterComponent
       ],
+      imports: [
+        FormsModule,
+        RouterModule.forRoot(ROUTES, { useHash: true })
+      ]
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it('Debe crear el appComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'my-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('my-app');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to my-app!');
   });
 });

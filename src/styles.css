@@ -1,1 +1,345 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background: url('https://eva.unapec.edu.do/moodle/theme/boost/pix/login/bg-body.jpg');
+}
+
+footer {
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.card1 {
+    /* margin: 10px; */
+    /* padding: 1px; */
+    border: transparent;
+}
+
+.card2 {
+    /* margin: 10px; */
+}
+
+.texto {
+    background: #0058a6;
+    padding: 10px;
+    width: 510px;
+    min-width: 510px;
+    min-height: 272px;
+}
+
+.texto p {
+    color: #cee4f8;
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.texto h1 {
+    color: white;
+}
+
+.main-content {
+    height: 600px;
+    width: 1300px;
+}
+
+.foto-eva {
+    width: 510px;
+    min-width: 510px;
+}
+
+.formulario {
+    margin-top: 50px;
+    min-width: 510px;
+    min-height: 272px;
+}
+
+.card2 {
+    margin: 0px;
+    border-color: rgb(235, 229, 229);
+}
+
+
+/* .botones ul {
+    display: inline;
+    list-style: none;
+}
+
+.botenes li {
+    margin: 10px;
+} */
+
+
+/* .botones li {
+    padding: 17px 0;
+    float: none;
+    width: auto;
+    min-width: 50px;
+} */
+
+.botones .calendario {
+    background-color: rgba(255, 255, 255, .9);
+    min-width: 50px;
+    font-size: 12px;
+    background-repeat: no-repeat;
+}
+
+.botones .ayuda {
+    background-color: #f0f8fc;
+    min-width: 50px;
+    font-size: 12px;
+}
+
+.botones .pregunta {
+    background-color: #e2f3fa;
+    min-width: 50px;
+    font-size: 12px;
+}
+
+@media (min-width: 769px) {
+    .botones li {
+        padding: 17px 0;
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .botones li a {
+        padding-top: 51px;
+        font-size: 14px;
+        line-height: 17px;
+        background-size: auto !important;
+    }
+}
+
+.column1 {
+    margin-right: 0px;
+}
+
+.column2 {
+    padding-left: 2px;
+    padding-right: 0px;
+}
+
+@media (min-width: 769px) {
+    .botones {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0;
+        float: right;
+        /* width: 11%; */
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+}
+
+.botones ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 992px) {
+    footer .logo img {
+        width: 150px;
+    }
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media (min-width: 992px) {
+    footer .redes {
+        order: 3;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .redes ul {
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .redes ul {
+        border: none;
+    }
+}
+
+footer .redes ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    /* padding: 15px 0; */
+    /* border-top: 1px solid #4a6581; */
+    /* border-bottom: 1px solid #4a6581; */
+}
+
+footer li {
+    width: 50px;
+    text-align: center;
+}
+
+footer * {
+    /* -webkit-box-sizing: inherit; */
+    box-sizing: inherit;
+}
+
+footer .direccion p {
+    margin: 0;
+}
+
+footer a,
+footer a:hover {
+    color: #4e799f;
+}
+
+footer .direccion {
+    color: #547292;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+footer {
+    font-family: Arial;
+    font-weight: 400;
+}
+
+@media (min-width: 992px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer {
+        margin-top: 0;
+    }
+}
+
+footer {
+    background: #023f75;
+    margin-top: 40px;
+    padding: 0;
+    font-family: Arial;
+    font-weight: 400;
+}
+
+footer .container {
+    margin: auto;
+}
+
+@media (min-width: 992px) {
+    footer .container {
+        padding-top: 7px;
+        padding-bottom: 0px;
+    }
+}
+
+.nota-info {
+    background: #ff9b00 url(https://eva.unapec.edu.do/moodle/theme/boost/pix/icn-info.png) no-repeat 12px center;
+    border-radius: 5px;
+    padding-left: 50px;
+    font-size: 13px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.nota-info p {
+    background: #f3f3f3;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 20px 8px 20px;
+    line-height: 19px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #727272;
+}
+
+@media (min-width: 769px) {
+    .opciones ul.links {
+        position: absolute;
+        bottom: 0;
+        right: 40px;
+        text-align: right;
+    }
+}
+
+.opciones ul.links {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    text-align: right;
+    font-size: 13px;
+}
+
+@media (min-width: 769px) {
+    .opciones ul.links li+li {
+        border-left: 1px solid #454545;
+        padding-left: 12px;
+        margin-left: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .opciones ul.links a {
+        color: #444;
+        border-bottom: 2px solid #ee7449;
+        font-weight: bold;
+    }
+}
+
+.opciones ul.links a {
+    color: #454545;
+    border-bottom: 2px solid #ee7449;
+    font-weight: bold;
+}
+
+@media (min-width: 769px) {
+    .opciones ul.links li {
+        display: inline-block;
+        margin: 0 0 0 20px;
+    }
+}
+
+label {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.botones li a:hover {
+    text-decoration: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.ul-validation li {
+    color: red;
+}

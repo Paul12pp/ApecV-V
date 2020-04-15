@@ -1,0 +1,74 @@
+<div class="row main-content">
+    <div class="col-10 column1">
+        <div class="card card1">
+            <div class="row">
+                <div class=" col-6">
+                    <img class="foto-eva" src="https://eva.unapec.edu.do/moodle/theme/boost/pix/login/foto.jpg" alt="">
+                    <div class="texto">
+                        <h1>Portal de Admisiones</h1>
+                        <p> En nuestro portal admisiones puede dar seguimiento a su proceso de admisión a nuestra universidad APEC. Se caracteriza por tener una apariencia amigable y por su facilidad de uso. Todas las asignaturas de UNAPEC, en las modalidades
+                            presencial, semipresencial y virtual, se apoyan en las herramientas del entorno de aprendizaje. ¡Construyamos juntos una experiencia académica significativa!</p>
+                    </div>
+                </div>
+                <div class="col-6 formulario">
+                    <div class="title">
+                        <h1 class="col">Acceder</h1>
+                    </div>
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f)" (keydown)="onKeydown($event)">
+                        <ul class="ul-validation">
+                            <li *ngIf="f.controls.usuario?.errors?.pattern">Correo invalido</li>
+                            <li *ngIf="invalidpass">Contraseña invalida</li>
+                            <li *ngIf="notfound">Usuario no encontrado</li>
+                        </ul>
+                        <div class="form-group col-8">
+                            <label for="usuario">Nombre de usuario</label>
+                            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [ngClass]="{'is-invalid': invalid || f.controls.usuario?.errors?.pattern}" name="usuario" id="usuario" placeholder="20190596@unapec.edu.do" ngModel required>
+                        </div>
+                        <div class="form-group col-8">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" [ngClass]="{'is-invalid': invalid || invalidpass}" name="password" id="password" ngModel required>
+                        </div>
+                        <div class="form-group col-8">
+                            <button type="submit" class=" btn btn-primary">Iniciar sesión</button>
+                        </div>
+                    </form>
+                    <div class="nota-info" id="">
+                        <p id=""><strong>Solicite su recibo con valor fiscal antes de efectuar el pago</strong>. Recuerde que no se emitirán recibos ni se realizarán cambios posterior al pago. Puede contactarnos al 809-731-7333.</p>
+                    </div>
+                    <div class="opciones">
+                        <ul class="links">
+                            <li><a (click)="changePassword()" class="pointer" target="_blank">Olvidé mi contraseña</a></li>
+                            <li><a href="https://admisiones.unapec.edu.do/formularioadmision">¿No tienes cuenta? Crea una cuenta aquí</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-1 column2">
+        <div class="card card2">
+            <div class="botones">
+                <ul>
+                    <li class="calendario">
+                        <img src="https://eva.unapec.edu.do/moodle/theme/boost/pix/login/cal-acad.png" alt="">
+                        <br>
+                        <a href="https://eva.unapec.edu.do/moodle/custom/redirect.php?ref=http://calendario.unapec.edu.do" target="_BLANK">
+							Calendario<br> Académico
+						</a>
+                    </li>
+                    <li class="ayuda">
+                        <img src="https://eva.unapec.edu.do/moodle/theme/boost/pix/login/ayuda.png" alt="">
+                        <br>
+                        <a href="https://eva.unapec.edu.do/mantenimiento/" target="_BLANK">Ayuda<br> en Línea</a>
+                    </li>
+                    <li class="pregunta">
+                        <img src="https://eva.unapec.edu.do/moodle/theme/boost/pix/login/preg-frec.png" alt="">
+                        <br>
+                        <a href="https://eva.unapec.edu.do/moodle/custom/redirect.php?ref=http://preguntas.unapec.edu.do" target="_BLANK">Preguntas<br> Frecuentes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
